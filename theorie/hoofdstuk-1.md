@@ -1,4 +1,4 @@
-# Les 1 — Intro, installatie en Python-basis 
+# Hoofdstuk 1 — Intro, installatie en Python-basis 
 ## Wat is Python?
 
 * Een **programmeertaal** die **makkelijk leesbaar** is (weinig speciale tekens). Je kan er snel kleine scripts mee maken die echt werk doen.
