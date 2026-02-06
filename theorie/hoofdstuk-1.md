@@ -8,17 +8,24 @@
 ### Kleine geschiedenis
 
 * **Maker**: Guido van Rossum — eerste release **1991**.
-* **Idee**: maak de taal **eenvoudig** zodat je sneller **begrijpt dan zoekt**.
+* Guido Van Rossum was grote fan van de komedie-reeks van **'Monty Python'**. In het begin waren er heel wat referenties naar die reeks in voorbeelden terug te vinden.
+* **Filosofie**: maak de taal **eenvoudig** zodat je sneller **begrijpt dan zoekt**.
+* Uitgegroeid tot een van de meest gebruikte programmeertalen wereldwijd.
 
 ### Populaire libraries (waarom sysadmins dit boeit)
 
-* `requests` (HTTP healthchecks/APIs), `paramiko` (SSH/SFTP), `jinja2` (config-templates), `pyyaml` (YAML ↔ Ansible), `schedule`/`APScheduler` (taken plannen), `psutil` (systeeminfo).
-  *(Vandaag blijven we bij de standaardbibliotheek; dit is vooruitblik.)*
+* `requests` (HTTP healthchecks/APIs)
+* `paramiko` (SSH/SFTP)
+* `jinja2` (config-templates)
+* `pyyaml` (YAML ↔ Ansible)
+* `schedule`/`APScheduler` (taken plannen)
+* `psutil` (systeeminfo).
+  
+*(Vandaag blijven we bij de standaardbibliotheek; dit is vooruitblik.)*
 
 
-## Waar “draait” Python? (vergelijking met JS)
+## Hoe “draait” Python?
 
-* **JS**: draait in een **engine** zoals **V8** (Chrome/Node).
 * **Python**: jouw `.py` gaat naar een **Python-engine** op je OS.
 
   * **CPython** (standaard): denk aan een **voorlezer** die je code **regel voor regel** omzet naar **bytecode** en die uitvoert op een **kleine virtuele machine**.
@@ -30,6 +37,8 @@
 ## Installatie (stap-voor-stap)
 
 ### 1) Python 3.12+
+
+Bij sommige bestuurssystemen is 
 
 **Windows**
 
@@ -43,6 +52,8 @@
    ```
 
    Zie je `Python 3.13.x`? Goed.
+
+*Python kan je ook installeren via de App Store van Microsoft. Het kan daarbij voorvallen dat Python nog gelinkt staat aan het install-script van de app-store. Om dit te verhelpen ga je naar App execution aliases. Check daar 'App Installer - Python' en 'App Installer Python3' af*
 
 **macOS**
 
@@ -66,8 +77,9 @@ pip3 --version
 ### 2) VS Code + extensies
 
 * **VS Code** installeren (code.visualstudio.com).
-* Extensies: **Python** (Microsoft) en **Pylance**. (later)
-  In VS Code: Extensions (Ctrl/Cmd+Shift+X) → zoek → *Install*.
+* Extensies: **Python** (Microsoft).
+  - deze installeert: **Python**, **Python Debugger**, **Python Environments** en **Pylance**. (zie later)
+  - In VS Code: Extensions (Ctrl/Cmd+Shift+X) → zoek Python → *Install*.
 
 ### 3) Eerste project + **venv** (wat het écht is)
 
