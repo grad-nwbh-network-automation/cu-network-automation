@@ -3,7 +3,8 @@
 
 * Een **programmeertaal** die **makkelijk leesbaar** is (weinig speciale tekens). Je kan er snel kleine scripts mee maken die echt werk doen.
 * **Waar gebruik je het voor?** Automatisatie (bestanden, logs, services), web, data, AI, CLI-tools.
-* **Waarom populair?** Grote community en **veel kant-en-klare bouwstenen** (packages).
+* **Waarom populair?** Grote community, hoge software-kwaliteit en **veel kant-en-klare bouwstenen** (packages).
+* **Integraties**: Python kan andere programma's uitvoeren, kan interageren met andere componenen over een netwerk, kan gemakkelijk werken met bestanden, ... .
 
 ### Kleine geschiedenis
 
@@ -127,8 +128,6 @@ python --version   # of python3 --version
 pip list
 ```
 
----
-
 ## Pip en co. — wat & waarom
 
 * **pip** = **app-store voor Python-code**. Je haalt **bouwstenen** binnen die anderen al gemaakt en getest hebben.
@@ -150,7 +149,28 @@ pip list
 
 **Mini-oefening (4 min)**: activeer je venv, run `pip freeze > pip_freeze.txt`, open het bestand.
 
----
+
+## Python uitvoeren
+### REPL
+We kunnen Python commando's rechtstreeks uitvoeren in onze command prompt. Je kan dit doen met het commando `python`.
+
+Bijvoorbeeld:
+```shell
+C:\network-automation>python
+Python 3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("hello world")
+'Hello world'
+>>> print(2 * 8)
+16
+>>> ^Z
+```
+
+Dit heet de REPL, dit staat voor Read - Evaluate - Print - Loop. Je kan dus commando's ingeven, die worden gelezen door de interpreter, worden effectief verwerkt. Een eventueel resultaat wordt weergegeven. Daarna kan je een nieuw commando ingeven (= lus/loop).
+
+Je kan deze REPL verlaten door `ctrl + Z` in te geven (in Linux `ctrl + D`). 
+
+### Python bestand uitvoeren
 
 ## Console-IO: `print()` en `input()`
 
@@ -168,106 +188,5 @@ print(f"Hallo {name}!")
 
 **Hoe lees je dit?** “Vraag naam, bewaar in `name`. Print ‘Hallo <naam>’.”
 
-**Rekenen? → casten**
+**Mini-oefening (5 min)**: vraag **naam** en **leeftijd**, toon dit in 1 nette zin.
 
-```python
-year = int(input("Geboortejaar: "))
-age = 2025 - year
-print("Leeftijd:", age)
-```
-
-**Wat is “casten”?**
-Een **type-omzetting**: je zegt expliciet “behandel deze tekst als getal”. Nuttig na `input()`, bij file-invoer (CSV) of APIs.
-
-**Mini-oefening (5 min)**: vraag **naam** en **geboortejaar**, bereken leeftijd, print 1 nette zin.
-
-## Variabelen & types (waarom meerdere?)
-
-* Data komt in **vormen**: getallen om te rekenen, tekst om te tonen/zoeken, collecties om door te lopen. **Verschillende types** maken code **duidelijker en veiliger**.
-
-### Primitieven
-
-```python
-age = 34          # int
-ratio = 3.14      # float
-msg = "ready"     # str
-ok = True         # bool
-nothing = None    # NoneType
-```
-
-### Collecties + **indexeren** (We gaan hier later dieper op in.)
-
-* `list` → **ordelijk**, **wijzigbaar**, **0-gebaseerde index**
-* `tuple` → **ordelijk**, **niet-wijzigbaar**, **0-gebaseerde index**
-* `set` → **geen volgorde**, **geen index**, wél snelle “zit het erin?”-checks
-* `dict` → **key → value** (opvragen via **key**, niet via nummer)
-
-```python
-items = [10, 20, 30]     # list
-print(items[0])          # 10  (eerste is index 0)
-items[1] = 99            # lijst kan je aanpassen
-
-point = (10, 20)         # tuple
-print(point[1])          # 20  (maar tuple kan je NIET wijzigen)
-
-tags = {"INFO", "WARN"}  # set
-print("INFO" in tags)    # True (set heeft geen index, wel 'in')
-
-user = {"name": "alice", "age": 30}  # dict
-print(user["name"])      # "alice"
-print("age" in user)     # True (checkt sleutels)
-```
-
-**Mini-oefening (6 min)**: maak een `list` van 3 services, print de **eerste** en **laatste**, vervang de middelste. Maak een `dict` met `host`, `ip` en print de `ip`.
-
-## Operatoren
-
-### Rekenoperators
-
-`+ - * / // % **`
-
-```python
-7 / 3   # 2.333...  (gewone deling)
-7 // 3  # 2         (gehele/floordeling)
-7 % 3   # 1         (rest/modulo)
-2 ** 4  # 16        (macht)
-```
-
-**Wat is modulo (`%`)?**
-De **rest** na deling. Voorbeeld: je hebt 7 logs en wil mapjes van 3 maken → 2 volle mapjes en **1 over** → `7 % 3 == 1`.
-**Praktisch**: check **even/oneven** → `n % 2 == 0`.
-
-### Vergelijking → `True/False`
-
-`== != < <= > >=`
-
-### Logisch
-
-`and`, `or`, `not` combineren voorwaarden.
-
-```python
-is_linux = True
-has_ssh  = False
-print(is_linux and has_ssh)  # False (allebei True nodig)
-print(is_linux or has_ssh)   # True  (minstens één True)
-print(not has_ssh)           # True  (omkeren)
-```
-
-**Wanneer?** Als je bv. alleen verder wil als **OS = Linux** **én** **SSH actief**.
-
-### Lidmaatschap
-
-`in`, `not in` → “zit dit erin?”
-
-```python
-"ERROR" in "2025-11-16 ERROR Disk full"  # True
-42 in [10, 42, 99]                       # True
-"age" in {"name":"a","age":30}           # True (checkt sleutels)
-```
-
-**Waarom?** Snel **filteren** of **valideren** zonder lange code.
-
-**Mini-oefening (7 min)**: vraag **poort** (int):
-
-* print “valid” als 1–65535, anders “invalid”;
-* print “privileged” als `< 1024`.
