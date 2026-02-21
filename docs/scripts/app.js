@@ -5,21 +5,22 @@ let runBtn, resetBtn, divConsole, editorContainer, questionContainer, titleConta
 let pyodide = null;
 let jar;
 let currentStarterCode, currentTestCode = "";
-let currentQuestion, questions;
+let currentQuestion, questions, storageKey;
 
-export async function loadPage(_questions) {
-  const hasStoredQuestions = localStorage.getItem("questions");
+export async function loadPage(key, _questions) {
+  storageKey = key;
+  const hasStoredQuestions = localStorage.getItem(key);
   if (!hasStoredQuestions) {
     questions = _questions;
   }
   else {
-    questions = JSON.parse(localStorage.getItem("questions"));
+    questions = JSON.parse(localStorage.getItem(storageKey));
   }
   // Start init onmiddellijk
   runBtn = document.getElementById("runBtn");
   document.getElementById("clear-storage").addEventListener("click", (e)=> {
     e.preventDefault();
-    localStorage.clear();
+    localStorage.removeItem(storageKey);
     window.location.reload();
   })
   questionContainer = document.getElementById("question-container");
@@ -79,7 +80,7 @@ async function runCode() {
     if (passes === response.results.length && passes !== 0 && currentQuestion.solved !== true) {
       currentQuestion.solved = true;
       currentQuestion.title = "✅ " + currentQuestion.title;
-      localStorage.setItem("questions", JSON.stringify(questions));
+      localStorage.setItem(storageKey, JSON.stringify(questions));
       setQuestions(questions);
     }
   } catch (e) {
