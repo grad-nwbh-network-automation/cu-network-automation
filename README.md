@@ -27,7 +27,10 @@ Deze repository is opgebouwd met een duidelijke scheiding tussen theorie en prak
 ```
 .
 ├── theorie/        # Alle theoretische uitleg per hoofdstuk
+├── docs/           # kom hier niet aan, dit is om de oefeningen weer te geven
 ├── labos/           # Praktijkoefeningen en opdrachten
 ├── voorbeelden/    # Voorbeeldscripts en configuraties
 └── README.md       # Dit document
 ```
+
+Het is belangrijk dat je de basis van Python onder de knie krijgt. Oefen deze daarom goed in via de basisoefeningen. Deze kan je terugvinden via volgende link: [https://grad-nwbh-network-automation.github.io/cu-network-automation/](https://grad-nwbh-network-automation.github.io/cu-network-automation/)
