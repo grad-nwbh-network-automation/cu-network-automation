@@ -60,7 +60,8 @@ header {
   box-shadow: var(--shadow);
 }
 
-header a, header a h1 {
+header a,
+header a h1 {
   margin: 0;
   font-size: 18px;
   letter-spacing: 0.2px;
@@ -161,6 +162,7 @@ aside h2 {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
 .card {
   margin: 3rem auto;
   position: relative;
@@ -275,4 +277,10 @@ wc-monaco-editor {
     background: #111827;
     color: var(--ink);
   }
+}
+
+code {
+  font-size: 19px;
+  color: darkred;
+  font-weight: bold;
 }

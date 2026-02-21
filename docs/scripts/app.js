@@ -8,7 +8,13 @@ let currentStarterCode, currentTestCode = "";
 let currentQuestion, questions;
 
 export async function loadPage(_questions) {
-  questions = _questions;
+  const hasStoredQuestions = localStorage.getItem("questions");
+  if (!hasStoredQuestions) {
+    questions = _questions;
+  }
+  else {
+    questions = JSON.parse(localStorage.getItem("questions"));
+  }
   // Start init onmiddellijk
   runBtn = document.getElementById("runBtn");
   questionContainer = document.getElementById("question-container");
@@ -51,9 +57,8 @@ async function runCode() {
     }
 
     const response = JSON.parse(pyodide.runPython(buildPythonBundle(code, currentTestCode)));
-    console.log(response);
     divConsole.textContent = response.console;
-   
+
     listTestResults.innerHTML = "";
     let passes = 0;
     response.results.forEach(r => {
@@ -64,9 +69,10 @@ async function runCode() {
       if (r.passed) passes++;
     });
     divStatus.innerHTML = `Einde: <strong>${passes}/${response.results.length}</strong> van de testen geslaagd.`;
-    if(passes === response.results.length && passes !== 0) {
-        currentQuestion.title = "✅ " + currentQuestion.title;
-        setQuestions(questions);
+    if (passes === response.results.length && passes !== 0) {
+      currentQuestion.title = "✅ " + currentQuestion.title;
+      localStorage.setItem("questions", JSON.stringify(questions));
+      setQuestions(questions);
     }
   } catch (e) {
     divConsole.textContent += `\n❌ Onverwachte fout: ${e?.message || e}`;
