@@ -1,4 +1,7 @@
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+}
+
 /* ---- Base / Reset ---- */
 * {
   box-sizing: border-box;
@@ -18,7 +21,7 @@
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  --vives-font: Poppins,Helvetica,Arial,sans-serif;
+  --vives-font: Poppins, Helvetica, Arial, sans-serif;
 }
 
 html,
@@ -57,11 +60,14 @@ header {
   box-shadow: var(--shadow);
 }
 
-header h1 {
+header a, header a h1 {
   margin: 0;
   font-size: 18px;
   letter-spacing: 0.2px;
+  text-decoration: none;
+  color: white;
 }
+
 #editor-container {
   width: 100%;
   height: 100%;
@@ -69,7 +75,9 @@ header h1 {
   padding: 15px;
   font-family: "Consolas";
 }
-#editor-wrapper, wc-monaco-editor {
+
+#editor-wrapper,
+wc-monaco-editor {
   position: relative;
 }
 
@@ -149,12 +157,30 @@ aside h2 {
   color: var(--brand);
 }
 
+.center {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.card {
+  margin: 3rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 0.375rem;
+  width: 500px;
+  padding: 1rem;
+  background-color: white;
+}
+
 /* ---- Editor Workspace ---- */
 #workspace {
   position: relative;
 }
 
-#editor-wrapper, wc-monaco-editor {
+#editor-wrapper,
+wc-monaco-editor {
   width: 100%;
   height: 200px;
   border-radius: 12px;
@@ -223,7 +249,8 @@ aside h2 {
     height: auto;
   }
 
-  #editor-wrapper, wc-monaco-editor {
+  #editor-wrapper,
+  wc-monaco-editor {
     height: 200px;
   }
 }
