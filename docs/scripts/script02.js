@@ -13,7 +13,7 @@ const questions = [
     },
     {
         title: "Een waarde aan een variabele toekennen",
-        description: "Hier declareren we de variabele num. Maar het heeft nog geen waarde. Ken deze variabele een waarde toe en voer de code uit.",
+        description: "Hier declareren we de variabele <code>num</code>. Maar het heeft nog geen waarde. Ken deze variabele een waarde toe en voer de code uit.",
         file: "exercises/02/assign-variable.py",
         tests: "exercises/02/assign-variable.test.py"
     },
@@ -22,6 +22,30 @@ const questions = [
         description: "Hier proberen we een variabele weg te schrijven naar de console, maar de variabele bestaat nog niet. Maak de variabele <code>num</code> aan en geef deze variabele een waarde. Voer de code daarna uit.",
         file: "exercises/02/create-variable.py",
         tests: "exercises/02/assign-variable.test.py"
+    },
+    {
+        title: "Een variabele re-assignen",
+        description: "In deze oefening heeft <code>num</code> de waarde 5. Geef er de waarde 10 aan. Voer de code daarna uit.",
+        file: "exercises/02/reassign-variable.py",
+        tests: "exercises/02/reassign-variable.test.py"
+    },
+    {
+        title: "Waarde van een variabele ophalen I",
+        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is een kleine fout. Herstel de code en voer ze uit.",
+        file: "exercises/02/get-value-of-variable.py",
+        tests: "exercises/02/get-value-of-variable.test.py"
+    },
+    {
+        title: "Waarde van een variabele ophalen II",
+        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is een kleine fout. Herstel de code en voer ze uit.",
+        file: "exercises/02/get-value-of-variable-2.py",
+        tests: "exercises/02/get-value-of-variable-2.test.py"
+    },
+    {
+        title: "Commentaar",
+        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is nog een print() commando dat we niet willen uitvoeren. Verander de lijn in commentaar, zodat ze niet wordt uitgevoerd.",
+        file: "exercises/02/comment.py",
+        tests: "exercises/02/comment.test.py"
     },
 ];
 

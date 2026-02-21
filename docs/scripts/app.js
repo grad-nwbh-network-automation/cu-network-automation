@@ -17,6 +17,11 @@ export async function loadPage(_questions) {
   }
   // Start init onmiddellijk
   runBtn = document.getElementById("runBtn");
+  document.getElementById("clear-storage").addEventListener("click", (e)=> {
+    e.preventDefault();
+    localStorage.clear();
+    window.location.reload();
+  })
   questionContainer = document.getElementById("question-container");
   runBtn.addEventListener("click", runCode);
   resetBtn = document.getElementById("resetBtn");
@@ -34,7 +39,8 @@ export async function loadPage(_questions) {
     , { tab: '  ' });
   runBtn.disabled = true;
   setQuestions(questions);
-  loadQuestion(questions[0]);
+  const nextQuestion = questions.filter(p=>p.solved !== true).length ? questions.filter(p=>p.solved !== true)[0] : questions[questions.length - 1];
+  loadQuestion(nextQuestion);
   currentQuestion = questions[0];
   divConsole.textContent = "⏳ Python runtime laden (Pyodide)...";
 
@@ -69,7 +75,9 @@ async function runCode() {
       if (r.passed) passes++;
     });
     divStatus.innerHTML = `Einde: <strong>${passes}/${response.results.length}</strong> van de testen geslaagd.`;
-    if (passes === response.results.length && passes !== 0) {
+    console.log(currentQuestion);
+    if (passes === response.results.length && passes !== 0 && currentQuestion.solved !== true) {
+      currentQuestion.solved = true;
       currentQuestion.title = "✅ " + currentQuestion.title;
       localStorage.setItem("questions", JSON.stringify(questions));
       setQuestions(questions);
