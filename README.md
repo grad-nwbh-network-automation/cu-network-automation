@@ -27,7 +27,7 @@ Deze repository is opgebouwd met een duidelijke scheiding tussen theorie en prak
 ```
 .
 ├── theorie/        # Alle theoretische uitleg per hoofdstuk
-├── labs/           # Praktijkoefeningen en opdrachten
+├── labos/           # Praktijkoefeningen en opdrachten
 ├── voorbeelden/    # Voorbeeldscripts en configuraties
 └── README.md       # Dit document
 ```

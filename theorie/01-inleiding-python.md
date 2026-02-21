@@ -190,3 +190,7 @@ print(f"Hallo {name}!")
 
 **Mini-oefening (5 min)**: vraag **naam** en **leeftijd**, toon dit in 1 nette zin.
 
+## Git & Github
+
+### Git fundamentals
+... WIP ... 
