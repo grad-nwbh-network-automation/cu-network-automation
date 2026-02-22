@@ -1,0 +1,6 @@
+# Maak phrase = "programmeren"
+# Neem de eerste 7 tekens (index 0 t/m 6) in part en print part
+# Schrijf je code hieronder:
+# phrase = ...
+# part = ...
+# print(part)

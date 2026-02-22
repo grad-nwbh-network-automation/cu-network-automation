@@ -1,0 +1,6 @@
+# Maak phrase = "programmeren"
+# Neem de laatste 4 tekens in tail en print tail
+# Schrijf je code hieronder:
+# phrase = ...
+# tail = ...
+# print(tail)

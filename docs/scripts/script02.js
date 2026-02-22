@@ -1,51 +1,119 @@
 import { loadPage } from "./app.js";
 
 window.addEventListener("load", async () => {
-    await loadPage("questions-1",questions);
+    await loadPage("questions-1", questions);
 });
-
 const questions = [
-    {
-        title: "Hallo wereld!",
-        description: "Om deze oefening tot een goed einde te brengen, type <code>print(\"Hallo wereld\")</code> en klik op run",
-        file: "exercises/02/hello-world.py",
-        tests: "exercises/02/hello-world.test.py"
-    },
-    {
-        title: "Een waarde aan een variabele toekennen",
-        description: "Hier declareren we de variabele <code>num</code>. Maar het heeft nog geen waarde. Ken deze variabele een waarde toe en voer de code uit.",
-        file: "exercises/02/assign-variable.py",
-        tests: "exercises/02/assign-variable.test.py"
-    },
-    {
-        title: "Een variabele aanmaken",
-        description: "Hier proberen we een variabele weg te schrijven naar de console, maar de variabele bestaat nog niet. Maak de variabele <code>num</code> aan en geef deze variabele een waarde. Voer de code daarna uit.",
-        file: "exercises/02/create-variable.py",
-        tests: "exercises/02/assign-variable.test.py"
-    },
-    {
-        title: "Een variabele re-assignen",
-        description: "In deze oefening heeft <code>num</code> de waarde 5. Geef er de waarde 10 aan. Voer de code daarna uit.",
-        file: "exercises/02/reassign-variable.py",
-        tests: "exercises/02/reassign-variable.test.py"
-    },
-    {
-        title: "Waarde van een variabele ophalen I",
-        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is een kleine fout. Herstel de code en voer ze uit.",
-        file: "exercises/02/get-value-of-variable.py",
-        tests: "exercises/02/get-value-of-variable.test.py"
-    },
-    {
-        title: "Waarde van een variabele ophalen II",
-        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is een kleine fout. Herstel de code en voer ze uit.",
-        file: "exercises/02/get-value-of-variable-2.py",
-        tests: "exercises/02/get-value-of-variable-2.test.py"
-    },
-    {
-        title: "Commentaar",
-        description: "In deze oefening creëren we een variabele en proberen we ze uit te printen. Maar, er is nog een print() commando dat we niet willen uitvoeren. Verander de lijn in commentaar, zodat ze niet wordt uitgevoerd.",
-        file: "exercises/02/comment.py",
-        tests: "exercises/02/comment.test.py"
-    },
-];
+  {
+    title: "Tekst toekennen aan een variabele",
+    description:
+      "Ken de variabele <code>text</code> de waarde <code>\"Python is leuk\"</code> toe en print deze waarde naar de console.",
+    file: "exercises/02/assign-string.py",
+    tests: "exercises/02/assign-string.test.py"
+  },
+  {
+    title: "String-concatenatie",
+    description:
+      "Voeg twee delen tekst samen via concatenatie. Maak twee variabelen <code>part1</code> en <code>part2</code> met respectievelijk <code>\"Hallo\"</code> en <code>\" wereld\"</code>. Maak daarna een nieuwe variabele <code>message</code> die de som is van beide, en print <code>message</code>.",
+    file: "exercises/02/concatenate.py",
+    tests: "exercises/02/concatenate.test.py"
+  },
+  {
+    title: "Teken ophalen op index (eerste teken)",
+    description:
+      "Maak de variabele <code>word</code> met waarde <code>\"python\"</code>. Haal het eerste teken uit <code>word</code> via indexering en bewaar het in <code>first_char</code>. Print <code>first_char</code>.",
+    file: "exercises/02/index-first.py",
+    tests: "exercises/02/index-first.test.py"
+  },
+  {
+    title: "Teken ophalen vanaf het einde (laatste teken)",
+    description:
+      "Gebruik dezelfde stringtechniek maar nu vanaf het einde. Maak <code>word</code> met waarde <code>\"python\"</code>. Haal het laatste teken op met negatieve indexering en bewaar het in <code>last_char</code>. Print <code>last_char</code>.",
+    file: "exercises/02/index-last.py",
+    tests: "exercises/02/index-last.test.py"
+  },
+  {
+    title: "Slicing (substrings nemen)",
+    description:
+      "Maak <code>phrase</code> met waarde <code>\"programmeren\"</code>. Neem een slice van de eerste 7 tekens (index 0 t/m 6) en bewaar die in <code>part</code>. Print <code>part</code>.",
+    file: "exercises/02/slice-begin.py",
+    tests: "exercises/02/slice-begin.test.py"
+  },
+  {
+    title: "Slicing vanaf het einde",
+    description:
+      "Maak <code>phrase</code> met waarde <code>\"programmeren\"</code>. Neem de laatste 4 tekens met slicing en bewaar ze in <code>tail</code>. Print <code>tail</code>.",
+    file: "exercises/02/slice-end.py",
+    tests: "exercises/02/slice-end.test.py"
+  },
+  {
+    title: "String omkeren (statisch verwacht resultaat)",
+    description:
+      "Maak <code>name</code> met waarde <code>\"Python\"</code> en keer deze om met slicing. Bewaar het resultaat in <code>reversed_name</code> en print <code>reversed_name</code>. Let op: de verwachte output is statisch.",
+    file: "exercises/02/reverse-static.py",
+    tests: "exercises/02/reverse-static.test.py"
+  },
+    // -------- len() (2) --------
+  {
+    title: "Lengte van een string (len) I",
+    description:
+      "Maak de variabele <code>word</code> met waarde <code>\"programmeren\"</code>. Bepaal de lengte met <code>len()</code> en print de lengte.",
+    file: "exercises/02/len-basic.py",
+    tests: "exercises/02/len-basic.test.py"
+  },
+  {
+    title: "Lengte van een zin (len) II",
+    description:
+      "Maak de variabele <code>sentence</code> met waarde <code>\"Hallo wereld\"</code>. Print de lengte met <code>len()</code>.",
+    file: "exercises/02/len-phrase.py",
+    tests: "exercises/02/len-phrase.test.py"
+  },
 
+  // -------- in / not in (2) --------
+  {
+    title: "Substring aanwezig? (in)",
+    description:
+      "Maak de variabele <code>phrase</code> met waarde <code>\"Python is leuk\"</code>. Controleer of <code>\"leuk\"</code> in <code>phrase</code> zit. Bewaar het resultaat in <code>has_word</code> en print <code>has_word</code>.",
+    file: "exercises/02/substring-in.py",
+    tests: "exercises/02/substring-in.test.py"
+  },
+  {
+    title: "Spatie verboden (not in)",
+    description:
+      "Maak de variabele <code>username</code> met waarde <code>\"janiek_colpaert\"</code>. Controleer of er <strong>geen</strong> spatie in zit met <code>\" \" not in username</code>. Bewaar het resultaat in <code>no_space</code> en print <code>no_space</code>.",
+    file: "exercises/02/substring-not-in.py",
+    tests: "exercises/02/substring-not-in.test.py"
+  },
+
+  // -------- Methoden: upper/lower/strip/replace (2) --------
+  {
+    title: "Hoofdletters maken (upper)",
+    description:
+      "Maak de variabele <code>word</code> met waarde <code>\"Python\"</code>. Zet de tekst om naar hoofdletters met <code>upper()</code> en print het resultaat.",
+    file: "exercises/02/upper-lower.py",
+    tests: "exercises/02/upper-lower.test.py"
+  },
+  {
+    title: "Trimmen en vervangen (strip + replace)",
+    description:
+      "Maak de variabele <code>text</code> met waarde <code>\"  spam, spam, eggs  \"</code>. Verwijder voor- en achterliggende spaties met <code>strip()</code>. Vervang daarna alle voorkomens van <code>\"spam, \"</code> zodat enkel <code>\"eggs\"</code> overblijft, en print het resultaat.",
+    file: "exercises/02/strip-replace.py",
+    tests: "exercises/02/strip-replace.test.py"
+  },
+
+  // -------- f-strings vs concatenatie (2) --------
+  {
+    title: "Begroeting met concatenatie",
+    description:
+      "Maak <code>first</code> met waarde <code>\"Hallo\"</code> en <code>name</code> met waarde <code>\"Janiek\"</code>. Bouw <code>message</code> met concatenatie zodat de output <code>\"Hallo, Janiek!\"</code> is, en print <code>message</code>.",
+    file: "exercises/02/concat-greeting.py",
+    tests: "exercises/02/concat-greeting.test.py"
+  },
+  {
+    title: "Begroeting met f-string",
+    description:
+      "Maak dezelfde variabelen <code>first</code> en <code>name</code> en bouw <code>message</code> met een f-string zodat de output exact <code>\"Hallo, Janiek!\"</code> is. Print <code>message</code>.",
+    file: "exercises/02/fstring-greeting.py",
+    tests: "exercises/02/fstring-greeting.test.py"
+  }
+];
