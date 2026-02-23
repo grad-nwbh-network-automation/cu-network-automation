@@ -41,34 +41,6 @@ const questions = [
     tests: "exercises/06/delete-key.test.py"
   },
   {
-    title: "Itereren over keys",
-    description:
-      "Gegeven <code>scores = { math: 10, science: 8 }</code>. Print alle keys met een <code>for</code>-loop (één per lijn).",
-    file: "exercises/06/loop-keys.py",
-    tests: "exercises/06/loop-keys.test.py"
-  },
-  {
-    title: "Itereren over values",
-    description:
-      "Gegeven <code>scores = { math: 10, science: 8 }</code>. Print alle values met een <code>for</code>-loop (één per lijn).",
-    file: "exercises/06/loop-values.py",
-    tests: "exercises/06/loop-values.test.py"
-  },
-  {
-    title: "Key check met in",
-    description:
-      "Gegeven <code>data = { a: 1, b: 2 }</code>. Controleer met <code>if</code>/<code>else</code> of <code>\"a\"</code> een key is. Print <code>\"gevonden\"</code> of <code>\"niet gevonden\"</code>.",
-    file: "exercises/06/key-in.py",
-    tests: "exercises/06/key-in.test.py"
-  },
-  {
-    title: "Dictionary samenvoegen",
-    description:
-      "Gegeven <code>d1 = { a: 1 }</code> en <code>d2 = { b: 2 }</code>. Maak een nieuwe dictionary <code>merged</code> en print deze.",
-    file: "exercises/06/merge-dicts.py",
-    tests: "exercises/06/merge-dicts.test.py"
-  },
-  {
     title: "Geneste dictionary",
     description:
       "Maak een dictionary <code>student</code> met <code>name: \"Tom\"</code> en <code>scores: { math: 9, dutch: 8 }</code>. Print de waarde van <code>math</code>.",
