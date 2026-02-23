@@ -1,1 +1,2 @@
-print( )
+cities = ["Brugge", "Gent", "Leuven"]
+print()

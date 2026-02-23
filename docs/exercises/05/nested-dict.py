@@ -1,4 +1,3 @@
-
 student = {
     "name": "Tom",
     "scores": {"math": 9, "dutch": 8}

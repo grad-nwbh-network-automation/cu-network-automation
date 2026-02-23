@@ -1,2 +1,2 @@
-nums .
-print(nums)
+nums = [5, 1, 4, 2]
+print()
