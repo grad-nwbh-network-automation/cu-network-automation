@@ -1,5 +1,5 @@
 
 evens = []
-for ... in range(...):
-    evens.append(...)
+for   in range( ):
+    evens.append( )
 print(evens)

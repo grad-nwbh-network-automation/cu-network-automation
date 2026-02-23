@@ -1,5 +1,5 @@
 
 total = 0
-for ... in ...:
-    total += ...
+for   in  :
+    total +=  
 print(total)

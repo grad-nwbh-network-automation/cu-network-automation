@@ -1,7 +1,7 @@
-score = ...
-if ...:
+score = 74
+if :
     print("goed")
-elif ...:
+elif :
     print("voldoende")
 else:
     print("onvoldoende")

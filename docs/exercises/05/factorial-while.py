@@ -1,7 +1,7 @@
 
 n = 5
 result = 1
-while ...:
-    result *= ...
-    ...
+while  :
+    result *=  
+     
 print(result)

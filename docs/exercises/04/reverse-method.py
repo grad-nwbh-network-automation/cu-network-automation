@@ -1,2 +1,2 @@
-nums....
+nums .
 print(nums)

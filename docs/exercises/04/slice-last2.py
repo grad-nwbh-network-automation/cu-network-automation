@@ -1,2 +1,2 @@
-tail = ...
+tail =  
 print(tail)

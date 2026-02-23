@@ -1,6 +1,6 @@
-is_student = ...
-has_discount_code = ...
-if ...:
+is_student = 
+has_discount_code = 
+if :
     print("korting")
 else:
     print("geen korting")

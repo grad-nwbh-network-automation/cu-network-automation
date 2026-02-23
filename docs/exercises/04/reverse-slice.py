@@ -1,2 +1,2 @@
-rev = ...
+rev =  
 print(rev)

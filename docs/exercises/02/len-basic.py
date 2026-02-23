@@ -1,2 +1,2 @@
-word = ...
-print(len(word))
+word = "programmeren"
+print( )

@@ -1,3 +1,3 @@
 
-for ... in ...:
-    print(...)
+for   in  :
+    print( )

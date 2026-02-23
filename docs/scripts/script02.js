@@ -14,26 +14,26 @@ const questions = [
   {
     title: "String-concatenatie",
     description:
-      "Voeg twee delen tekst samen via concatenatie. Maak twee variabelen <code>part1</code> en <code>part2</code> met respectievelijk <code>\"Hallo\"</code> en <code>\" wereld\"</code>. Maak daarna een nieuwe variabele <code>message</code> die de som is van beide, en print <code>message</code>.",
+      "Voeg twee delen tekst samen via concatenatie. Maak twee variabelen <code>part1</code> en <code>part2</code> met respectievelijk <code>\"Hallo\"</code> en <code>\" wereld\"</code>. Maak daarna een nieuwe variabele <code>message</code> die beide samenvoegt met een spatie, en print <code>message</code>.",
     file: "exercises/02/concatenate.py",
     tests: "exercises/02/concatenate.test.py"
   },
   {
-    title: "Teken ophalen op index (eerste teken)",
+    title: "Teken ophalen op index",
     description:
       "Maak de variabele <code>word</code> met waarde <code>\"python\"</code>. Haal het eerste teken uit <code>word</code> via indexering en bewaar het in <code>first_char</code>. Print <code>first_char</code>.",
     file: "exercises/02/index-first.py",
     tests: "exercises/02/index-first.test.py"
   },
   {
-    title: "Teken ophalen vanaf het einde (laatste teken)",
+    title: "Teken ophalen vanaf het einde",
     description:
       "Gebruik dezelfde stringtechniek maar nu vanaf het einde. Maak <code>word</code> met waarde <code>\"python\"</code>. Haal het laatste teken op met negatieve indexering en bewaar het in <code>last_char</code>. Print <code>last_char</code>.",
     file: "exercises/02/index-last.py",
     tests: "exercises/02/index-last.test.py"
   },
   {
-    title: "Slicing (substrings nemen)",
+    title: "Slicing",
     description:
       "Maak <code>phrase</code> met waarde <code>\"programmeren\"</code>. Neem een slice van de eerste 7 tekens (index 0 t/m 6) en bewaar die in <code>part</code>. Print <code>part</code>.",
     file: "exercises/02/slice-begin.py",
@@ -47,61 +47,47 @@ const questions = [
     tests: "exercises/02/slice-end.test.py"
   },
   {
-    title: "String omkeren (statisch verwacht resultaat)",
+    title: "String omkeren",
     description:
       "Maak <code>name</code> met waarde <code>\"Python\"</code> en keer deze om met slicing. Bewaar het resultaat in <code>reversed_name</code> en print <code>reversed_name</code>. Let op: de verwachte output is statisch.",
     file: "exercises/02/reverse-static.py",
     tests: "exercises/02/reverse-static.test.py"
   },
-    // -------- len() (2) --------
   {
-    title: "Lengte van een string (len) I",
+    title: "Lengte van een string",
     description:
       "Maak de variabele <code>word</code> met waarde <code>\"programmeren\"</code>. Bepaal de lengte met <code>len()</code> en print de lengte.",
     file: "exercises/02/len-basic.py",
     tests: "exercises/02/len-basic.test.py"
   },
   {
-    title: "Lengte van een zin (len) II",
-    description:
-      "Maak de variabele <code>sentence</code> met waarde <code>\"Hallo wereld\"</code>. Print de lengte met <code>len()</code>.",
-    file: "exercises/02/len-phrase.py",
-    tests: "exercises/02/len-phrase.test.py"
-  },
-
-  // -------- in / not in (2) --------
-  {
-    title: "Substring aanwezig? (in)",
+    title: "Substring aanwezig?",
     description:
       "Maak de variabele <code>phrase</code> met waarde <code>\"Python is leuk\"</code>. Controleer of <code>\"leuk\"</code> in <code>phrase</code> zit. Bewaar het resultaat in <code>has_word</code> en print <code>has_word</code>.",
     file: "exercises/02/substring-in.py",
     tests: "exercises/02/substring-in.test.py"
   },
   {
-    title: "Spatie verboden (not in)",
+    title: "Spatie verboden",
     description:
-      "Maak de variabele <code>username</code> met waarde <code>\"janiek_colpaert\"</code>. Controleer of er <strong>geen</strong> spatie in zit met <code>\" \" not in username</code>. Bewaar het resultaat in <code>no_space</code> en print <code>no_space</code>.",
+      "Maak de variabele <code>username</code> met waarde <code>\"voornaam_achternaam\"</code>. Controleer of er <strong>geen</strong> spatie in zit met <code>\" \" not in username</code>. Bewaar het resultaat in <code>no_space</code> en print <code>no_space</code>.",
     file: "exercises/02/substring-not-in.py",
     tests: "exercises/02/substring-not-in.test.py"
   },
-
-  // -------- Methoden: upper/lower/strip/replace (2) --------
   {
-    title: "Hoofdletters maken (upper)",
+    title: "Hoofdletters maken",
     description:
       "Maak de variabele <code>word</code> met waarde <code>\"Python\"</code>. Zet de tekst om naar hoofdletters met <code>upper()</code> en print het resultaat.",
     file: "exercises/02/upper-lower.py",
     tests: "exercises/02/upper-lower.test.py"
   },
   {
-    title: "Trimmen en vervangen (strip + replace)",
+    title: "Trimmen en vervangen",
     description:
       "Maak de variabele <code>text</code> met waarde <code>\"  spam, spam, eggs  \"</code>. Verwijder voor- en achterliggende spaties met <code>strip()</code>. Vervang daarna alle voorkomens van <code>\"spam, \"</code> zodat enkel <code>\"eggs\"</code> overblijft, en print het resultaat.",
     file: "exercises/02/strip-replace.py",
     tests: "exercises/02/strip-replace.test.py"
   },
-
-  // -------- f-strings vs concatenatie (2) --------
   {
     title: "Begroeting met concatenatie",
     description:

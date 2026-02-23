@@ -1,2 +1,2 @@
-part = ...
+part =  
 print(part)

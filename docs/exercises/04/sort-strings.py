@@ -1,2 +1,2 @@
-names....
+names .
 print(names)

@@ -1,4 +1,4 @@
-for ... in nums:
-    if ...:
+for   in nums:
+    if  :
         print("found")
         break

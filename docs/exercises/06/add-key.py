@@ -1,5 +1,5 @@
 
 car = {"brand": "BMW"}
 
-car[...]
+car[ ]
 print(car)

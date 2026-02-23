@@ -1,5 +1,5 @@
 
 sentence = ""
-for ... in ...:
-    ...
+for   in  :
+     
 print(sentence)
