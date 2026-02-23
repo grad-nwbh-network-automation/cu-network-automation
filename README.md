@@ -28,8 +28,8 @@ Deze repository is opgebouwd met een duidelijke scheiding tussen theorie en prak
 .
 ├── theorie/        # Alle theoretische uitleg per hoofdstuk
 ├── docs/           # kom hier niet aan, dit is om de oefeningen weer te geven
-├── labos/           # Praktijkoefeningen en opdrachten
-├── voorbeelden/    # Voorbeeldscripts en configuraties
+├── labos/          # Praktijkoefeningen en opdrachten
+├── oefeningen/     # Bijkomende oefeningen
 └── README.md       # Dit document
 ```
 
