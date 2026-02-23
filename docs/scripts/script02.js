@@ -1,7 +1,7 @@
 import { loadPage } from "./app.js";
 
 window.addEventListener("load", async () => {
-    await loadPage("questions-1", questions);
+    await loadPage("questions-2", questions);
 });
 const questions = [
   {
