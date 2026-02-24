@@ -1,3 +1,0 @@
-name =  
-reversed_name =  
-print(reversed_name)

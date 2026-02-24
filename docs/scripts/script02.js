@@ -47,13 +47,6 @@ const questions = [
     tests: "exercises/02/slice-end.test.py"
   },
   {
-    title: "String omkeren",
-    description:
-      "Maak <code>name</code> met waarde <code>\"Python\"</code> en keer deze om met slicing. Bewaar het resultaat in <code>reversed_name</code> en print <code>reversed_name</code>. Let op: de verwachte output is statisch.",
-    file: "exercises/02/reverse-static.py",
-    tests: "exercises/02/reverse-static.test.py"
-  },
-  {
     title: "Lengte van een string",
     description:
       "Maak de variabele <code>word</code> met waarde <code>\"programmeren\"</code>. Bepaal de lengte met <code>len()</code> en print de lengte.",

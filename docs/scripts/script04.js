@@ -99,7 +99,7 @@ const questions = [
   {
     title: "Stad aanwezig?",
     description:
-      "Gegeven <code>cities = [\"Brugge\", \"Gent\", \"Leuven\"]</code> en <code>target = \"gent\"</code>. Controleer <em>hoofdletter-onafhankelijk</em> of <code>target</code> in <code>cities</code> zit en print <code>\"gevonden\"</code> of <code>\"niet gevonden\"</code>.",
+      "Gegeven <code>cities = [\"Brugge\", \"Gent\", \"Leuven\"]</code> en <code>target = \"Gent\"</code>. Controleer of <code>target</code> in <code>cities</code> zit en print <code>\"gevonden\"</code> of <code>\"niet gevonden\"</code>.",
     file: "exercises/04/membership-ci.py",
     tests: "exercises/04/membership-ci.test.py"
   },
