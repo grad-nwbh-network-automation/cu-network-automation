@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>VIVES network automations, python oefeningen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="stylesheets/site.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="./">
+            <h1>VIVES Python Trainer</h1>
+        </a>
+    </header>
+
+    <aside id="questions">
+        <div>
+            <h2>Functies</h2>
+            <ol id="questionList">
+
+            </ol>
+        </div>
+        <footer>
+            <a href="#" id="clear-storage">Reset gemaakte oefeningen</a>
+        </footer>
+    </aside>
+
+    <main id="workspace">
+        <h3 id="title"></h3>
+        <p id="question-container"></p>
+        <div id="editor-wrapper">
+            <pre id="editor-container" class="language-python"></pre>
+            <div class="actions">
+                <button id="runBtn">Run</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+
+        <h3>Console</h3>
+        <pre id="console"></pre>
+        <h2>Resultaat</h2>
+        <div id="status">Vul de code aan zoals gevraagd en klik op <strong>Run</strong>.</div>
+        <ul id="testResults"></ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="scripts/script07.js" type="module"></script>
+</body>
+
+</html>

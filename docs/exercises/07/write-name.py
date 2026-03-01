@@ -1,0 +1,4 @@
+def ():
+    print("Welkom!")
+
+welkom()
