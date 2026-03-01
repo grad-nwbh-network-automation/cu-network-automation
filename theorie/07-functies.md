@@ -33,11 +33,11 @@ def naam_van_functie():
 ### Aanroepen
 
 ```python
-def hello():
+def print_hello():
     print("Hello from a function!")
 
-hello()       # eerste aanroep
-hello()       # tweede aanroep
+print_hello()       # eerste aanroep
+print_hello()       # tweede aanroep
 ```
 
 **Output:**
@@ -92,12 +92,12 @@ Roep de functie één keer aan.
 <summary>Oplossing</summary>
 
 ```python
-def banner():
+def show_banner():
     print("========================")
     print("  System Health Check")
     print("========================")
 
-banner()
+show_banner()
 ```
 
 </details>
@@ -133,10 +133,10 @@ Hallo Yunus!
 De **volgorde** bepaalt welk argument in welke parameter komt. Dit noemen we **positional arguments**.
 
 ```python
-def full_name(first, last):
+def show_full_name(first, last):
     print(f"{first} {last}")
 
-full_name("Amina", "Yildiz")    # first="Amina", last="Yildiz"
+show_full_name("Amina", "Yildiz")    # first="Amina", last="Yildiz"
 ```
 
 ### Keyword arguments
@@ -144,7 +144,7 @@ full_name("Amina", "Yildiz")    # first="Amina", last="Yildiz"
 Je kan ook de **naam** van de parameter gebruiken bij de aanroep. Dan maakt de volgorde **niet** uit.
 
 ```python
-full_name(last="Yildiz", first="Amina")    # zelfde resultaat
+show_full_name(last="Yildiz", first="Amina")    # zelfde resultaat
 ```
 
 > **Regel**: positional arguments komen altijd **vóór** keyword arguments.
@@ -203,11 +203,11 @@ Test met `device_info("switch01", "192.168.1.1")`.
 <summary>Oplossing</summary>
 
 ```python
-def device_info(hostname, ip):
+def get_device_info(hostname, ip):
     print(f"Device: {hostname} — IP: {ip}")
 
-device_info("switch01", "192.168.1.1")
-device_info("router01", "10.0.0.1")
+get_device_info("switch01", "192.168.1.1")
+get_device_info("router01", "10.0.0.1")
 ```
 
 </details>
@@ -614,7 +614,7 @@ print(total_ports(ports))    # 8625
 <summary>Oplossing</summary>
 
 ```python
-def total_ports(ports):
+def get_total_ports(ports):
     """Bereken de som van alle poortnummers."""
     total = 0
     for port in ports:
@@ -622,7 +622,7 @@ def total_ports(ports):
     return total
 
 ports = [80, 443, 8080, 22]
-print(total_ports(ports))    # 8625
+print(get_total_ports(ports))    # 8625
 ```
 
 </details>
