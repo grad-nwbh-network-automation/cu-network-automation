@@ -15,7 +15,7 @@ const questions = [
   {
     title: "Functienaam schrijven",
     description:
-      "Na <code>def</code> ontbreekt de functienaam. Schrijf de naam <code>welkom</code> gevolgd door <code>():</code> zodat de functie correct gedefinieerd wordt. Onderaan wordt <code>welkom()</code> al aangeroepen.",
+      "Na <code>def</code> ontbreekt de functienaam. Schrijf de naam <code>welcome</code> gevolgd door <code>():</code> zodat de functie correct gedefinieerd wordt. Onderaan wordt <code>welkom()</code> al aangeroepen.",
     file: "exercises/07/write-name.py",
     tests: "exercises/07/write-name.test.py"
   },

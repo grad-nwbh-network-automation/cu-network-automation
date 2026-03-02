@@ -1,4 +1,4 @@
 def ():
     print("Welkom!")
 
-welkom()
+welcome()
