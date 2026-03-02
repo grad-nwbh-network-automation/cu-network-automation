@@ -43,14 +43,14 @@ const questions = [
   {
     title: "Functie definiëren en aanroepen",
     description:
-      "Vul de <code>print()</code> aan in de functie <code>greet()</code> zodat ze <code>\"Hallo!\"</code> print. De functie wordt daarna aangeroepen.",
+      "Vul de <code>print()</code> aan in de functie <code>greet()</code> zodat ze <code>\"Hallo!\"</code> print. De functie wordt daarna aangeroepen. (Vergeet ! niet...)",
     file: "exercises/07/def-hello.py",
     tests: "exercises/07/def-hello.test.py"
   },
   {
     title: "Functie met parameter",
     description:
-      "Vul de <code>print()</code> aan in <code>greet(name)</code> zodat ze <code>\"Hallo, Amina!\"</code> print. Gebruik een f-string.",
+      "Vul de <code>print()</code> aan in <code>greet(name)</code> zodat ze <code>\"Hallo, Amina!\"</code> print. Gebruik een f-string. (Vergeet ! niet...)",
     file: "exercises/07/def-param.py",
     tests: "exercises/07/def-param.test.py"
   },
